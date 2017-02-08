@@ -5,7 +5,7 @@
 <listener class-name="com.demostore.qa.TestNGlisteners.TestNGListener"/>
 </listeners>
 
-<!--  
+  
 <test name="Demo Store QA with Chrome">
 <parameter name="browser" value="chrome"  />
 <parameter name="version" value="55.0.2883.87 m"  />
@@ -13,13 +13,14 @@
    <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest" />
 </classes>
 </test>
--->
 
+<!-- 
 <test name="Demo Store QA with Firefox">
 <parameter name="browser" value="firefox"  />
 <parameter name="version" value="51.0.1"  />
 <classes>
    <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest" />
 </classes>
-</test> <!-- Test -->
+</test> --> 
+
 </suite> <!-- Suite -->

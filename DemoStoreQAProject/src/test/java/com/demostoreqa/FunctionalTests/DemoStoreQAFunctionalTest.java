@@ -57,12 +57,9 @@ public class DemoStoreQAFunctionalTest {
 		}
 		else if(browser.equalsIgnoreCase("firefox"))
 		{
-			DesiredCapabilities caps = DesiredCapabilities.firefox();
-			caps.setCapability("platform", "Windows 7");
-			caps.setCapability("version", "51.0.1");
-			WebDriver driver = new RemoteWebDriver(new URL(SURL), caps);
-			//System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
-			//driver = new FirefoxDriver();
+			
+			System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+			driver = new FirefoxDriver();
 			driver.get("http://store.demoqa.com/");
 			
 		}	
