@@ -55,6 +55,8 @@ public class DemoStoreQAFunctionalTest {
 			driver.get("http://store.demoqa.com/");
 			driver.manage().window().maximize();
 		}
+		
+		/*
 		else if(browser.equalsIgnoreCase("firefox"))
 		{
 			
@@ -62,7 +64,7 @@ public class DemoStoreQAFunctionalTest {
 			driver = new FirefoxDriver();
 			driver.get("http://store.demoqa.com/");
 			
-		}	
+		}*/	
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Homeobj = new HomePageObject(driver);
