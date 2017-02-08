@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="44383" started-at="2017-02-08T11:25:45Z" finished-at="2017-02-08T11:26:29Z">
+  <suite name="Suite" duration-ms="39414" started-at="2017-02-08T11:31:05Z" finished-at="2017-02-08T11:31:45Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="44383" started-at="2017-02-08T11:25:45Z" finished-at="2017-02-08T11:26:29Z">
+    <test name="Test" duration-ms="39414" started-at="2017-02-08T11:31:05Z" finished-at="2017-02-08T11:31:45Z">
       <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@604ed9f0]" name="setUp" is-config="true" duration-ms="12233" started-at="2017-02-08T16:55:45Z" finished-at="2017-02-08T16:55:57Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@604ed9f0]" name="setUp" is-config="true" duration-ms="10339" started-at="2017-02-08T17:01:05Z" finished-at="2017-02-08T17:01:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyUserIsAbleToPurchaseSingleProduct(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@604ed9f0]" name="verifyUserIsAbleToPurchaseSingleProduct" duration-ms="30677" started-at="2017-02-08T16:55:57Z" data-provider="UserAdress" finished-at="2017-02-08T16:56:28Z">
+        <test-method status="PASS" signature="verifyUserIsAbleToPurchaseSingleProduct(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@604ed9f0]" name="verifyUserIsAbleToPurchaseSingleProduct" duration-ms="27660" started-at="2017-02-08T17:01:16Z" data-provider="UserAdress" finished-at="2017-02-08T17:01:43Z">
           <params>
             <param index="0">
               <value>
@@ -72,7 +72,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserIsAbleToPurchaseSingleProduct -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@604ed9f0]" name="tearDown" is-config="true" duration-ms="1438" started-at="2017-02-08T16:56:28Z" finished-at="2017-02-08T16:56:29Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@604ed9f0]" name="tearDown" is-config="true" duration-ms="1378" started-at="2017-02-08T17:01:43Z" finished-at="2017-02-08T17:01:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

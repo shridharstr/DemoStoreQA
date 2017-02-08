@@ -71,7 +71,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserIsAbleToPurchaseMultipleProduct(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException
@@ -91,7 +91,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserCanRemoveProductFromCartAndPurchase(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException {
@@ -110,7 +110,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifySubTotalPriceCalcualtionAfterRemovingProductFromCart() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
@@ -125,7 +125,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Test Passed successfully");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifySubTotalPriceCalcualtionForCartHavingMultipleProducts() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
@@ -138,7 +138,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Test Passed successfully");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyProductPriceAfterIncreaseInProductQuantity() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
@@ -148,7 +148,7 @@ public class DemoStoreQAFunctionalTest {
 		Checkobj.verifyTotalPriceOfProduct("Magic");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyProductPriceAfterDecreaseInProductQuantity() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
@@ -172,7 +172,7 @@ public class DemoStoreQAFunctionalTest {
 		Assert.assertEquals(Checkobj.checkDuplicateItems("Magic Mouse"), false);
 	}
 
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyPurchasingItemsFromDifferentCategories(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException {
@@ -189,7 +189,7 @@ public class DemoStoreQAFunctionalTest {
 		Assert.assertEquals(Checkobj.clickOnPurchase(), true);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifySubtotalForItemsFromDiffCategories() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
@@ -202,7 +202,7 @@ public class DemoStoreQAFunctionalTest {
 		Assert.assertEquals(Checkobj.verifySubTotalPrice(), true);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyEachProductPriceAddedFromDiffCategories() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
