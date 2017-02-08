@@ -44,35 +44,20 @@ public class DemoStoreQAFunctionalTest {
 
 	//@Listeners(com.demostore.qa.TestNGlisteners.TestNGListener.class)
 	@BeforeMethod
-	@Parameters("browser")
-	public void setUp(String browser) throws MalformedURLException {
+	public void setUp() throws MalformedURLException {
 		// Running on Local machine
 		
-		if(browser.equalsIgnoreCase("chrome"))
-		{
 			System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.get("http://store.demoqa.com/");
 			driver.manage().window().maximize();
-		}
-		
-		/*
-		else if(browser.equalsIgnoreCase("firefox"))
-		{
-			
-			System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
-			driver = new FirefoxDriver();
-			driver.get("http://store.demoqa.com/");
-			
-		}*/	
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Homeobj = new HomePageObject(driver);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    Homeobj = new HomePageObject(driver);
 
 	}
 
 	
-	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserIsAbleToPurchaseSingleProduct(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException {
@@ -86,7 +71,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserIsAbleToPurchaseMultipleProduct(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException

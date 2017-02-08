@@ -48,29 +48,6 @@ public class CheckoutPageObjects {
 
 		}
 
-		/*
-		 * for(int row=2;row<=row_count;row++) { //List<WebElement>
-		 * columns=rows.get(row).findElements(By.tagName("td"));
-		 * 
-		 * List<WebElement> col = driver.findElements(By.xpath(
-		 * "//*[@id='checkout_page_container']/div[1]/table/tbody/tr/td"));
-		 * 
-		 * int col_count = col.size(); System.out.println("Col Size: "+
-		 * col_count);
-		 * 
-		 * //int column_count=columns.size(); for(int j=0;j<=col_count;j++) {
-		 * //WebElement column=driver.findElement(By.xpath(
-		 * "//*[@id='checkout_page_container']/div[1]/table/tbody/tr["+ i
-		 * +"]/td["+ j +"]")); String column_value=col.get(j).getText();
-		 * if(column_value.equalsIgnoreCase(item)) { { WebElement
-		 * column_quantity=driver.findElement(By.xpath(
-		 * "//*[@id='checkout_page_container']/div[1]/table/tbody/tr["+row+
-		 * "]/td["+ j +"]/form/input[1]"));
-		 * column_quantity.sendKeys(String.valueOf(quantity));
-		 * 
-		 * } } } }
-		 */
-
 		return this;
 	}
 

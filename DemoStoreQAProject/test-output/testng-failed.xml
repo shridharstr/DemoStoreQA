@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <parameter name="browser" value="firefox"/>
-  <parameter name="version" value="51.0.1"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.demostore.qa.TestNGlisteners.TestNGListener"/>
   </listeners>
-  <test name="Demo Store QA with Firefox(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="version" value="51.0.1"/>
+  <test name="Test(failed)">
     <classes>
       <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest">
         <methods>
-          <include name="verifyUserIsAbleToPurchaseMultipleProduct"/>
+          <include name="tearDown"/>
+          <include name="verifyUserIsAbleToPurchaseSingleProduct" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest -->
     </classes>
-  </test> <!-- Demo Store QA with Firefox(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

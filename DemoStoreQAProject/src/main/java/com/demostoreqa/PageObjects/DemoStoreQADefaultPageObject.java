@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public abstract class DemoStoreQADefaultPageObject {
 
@@ -101,18 +101,15 @@ public abstract class DemoStoreQADefaultPageObject {
 	 
 	public void addToCart() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement AddToCart;
-		AddToCart = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("Buy")));
+		WebElement AddToCart = driver.findElement(By.name("Buy"));
 		AddToCart.click();
 		Thread.sleep(2000);
 	}
 	
 	public CheckoutPageObjects gotoCheckout() throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement GoToCheckout;
-		GoToCheckout = wait.until(ExpectedConditions.visibilityOfElementLocated((By.linkText("Go to Checkout"))));
+		
+		WebElement GoToCheckout = driver.findElement(By.linkText("Go to Checkout"));
 		GoToCheckout.click();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		return new CheckoutPageObjects(driver);

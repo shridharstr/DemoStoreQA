@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" thread-count="2" parallel="tests">
-<listeners>
-<listener class-name="com.demostore.qa.TestNGlisteners.TestNGListener"/>
-</listeners>
+<suite name="Suite">
+       <listeners>
+              <listener class-name="com.demostore.qa.TestNGlisteners.TestNGListener" />
+       </listeners>
 
-  
-<test name="Demo Store QA with Chrome">
-<parameter name="browser" value="chrome"  />
-<parameter name="version" value="55.0.2883.87 m"  />
-<classes>
-   <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest" />
-</classes>
-</test>
-
-<!-- 
-<test name="Demo Store QA with Firefox">
-<parameter name="browser" value="firefox"  />
-<parameter name="version" value="51.0.1"  />
-<classes>
-   <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest" />
-</classes>
-</test> --> 
-
+       <test name="Test">
+              <classes>
+                     <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest" />
+              </classes>
+       </test> <!-- Test -->
 </suite> <!-- Suite -->
+
