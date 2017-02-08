@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="6248" started-at="2017-02-02T09:21:16Z" finished-at="2017-02-02T09:21:23Z">
+    <groups>
+    </groups>
+    <test name="Demo Store QA with Firefox" duration-ms="6248" started-at="2017-02-02T09:21:16Z" finished-at="2017-02-02T09:21:23Z">
+      <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest">
+        <test-method status="FAIL" signature="setUp(java.lang.String)[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@6093dd95]" name="setUp" is-config="true" duration-ms="0" started-at="2017-02-02T14:51:16Z" finished-at="2017-02-02T14:51:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create new remote session. desired capabilities = Capabilities [{marionette=true, browserName=firefox, version=51.0.1, platform=VISTA}], required capabilities = Capabilities [{}]
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'U4-DPE-CPU-0213', ip: '10.10.124.137', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{marionette=true, browserName=firefox, version=51.0.1, platform=VISTA}], required capabilities = Capabilities [{}]
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'U4-DPE-CPU-0213', ip: '10.10.124.137', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:91)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:128)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:155)
+	at com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest.setUp(DemoStoreQAFunctionalTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="verifyUserIsAbleToPurchaseMultipleProduct(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@6093dd95]" name="verifyUserIsAbleToPurchaseMultipleProduct" duration-ms="5" started-at="2017-02-02T14:51:23Z" data-provider="UserAdress" finished-at="2017-02-02T14:51:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IN]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Maharashtra]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[tushar.rajput9311gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tushar]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Rajput]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[201,SB Road]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Pune]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Maharashtra]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[IN]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[422006]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[9856784598]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToPurchaseMultipleProduct -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest@6093dd95]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-02-02T14:51:23Z" finished-at="2017-02-02T14:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest -->
+    </test> <!-- Demo Store QA with Firefox -->
+  </suite> <!-- Suite -->
+</testng-results>
