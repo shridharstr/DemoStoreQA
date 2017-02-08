@@ -71,7 +71,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserIsAbleToPurchaseMultipleProduct(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException
@@ -91,7 +91,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserCanRemoveProductFromCartAndPurchase(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException {
@@ -160,7 +160,7 @@ public class DemoStoreQAFunctionalTest {
 		Checkobj.verifyTotalPriceOfProduct("Magic");
 	}
 
-	@Test(enabled = true, retryAnalyzer=RetryTest.class)
+	@Test(enabled = false, retryAnalyzer=RetryTest.class)
 	public void verifyDuplicateEntriesInCart() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");
