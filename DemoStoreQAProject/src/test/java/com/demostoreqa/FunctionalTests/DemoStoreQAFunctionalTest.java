@@ -16,6 +16,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
@@ -38,26 +39,32 @@ public class DemoStoreQAFunctionalTest {
 	public CheckoutPageObjects Checkobj;
 	public HomePageObject Homeobj;
 
-	public static final String USERNAME = "tusharr";
-	public static final String ACCESS_KEY = "df5a2462-a305-4ad1-a97b-b52d11731cc8";
-	public static final String SURL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
+//	public static final String USERNAME = "tusharr";
+	//public static final String ACCESS_KEY = "df5a2462-a305-4ad1-a97b-b52d11731cc8";
+//	public static final String SURL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 
 	//@Listeners(com.demostore.qa.TestNGlisteners.TestNGListener.class)
 	@BeforeMethod
 	public void setUp() throws MalformedURLException {
 		// Running on Local machine
 		
-			System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+	/*		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.get("http://store.demoqa.com/");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		    Homeobj = new HomePageObject(driver);
-
+*/
+		    System.setProperty("webdriver.ie.driver", "drivers\\internetexplorerdriver.exe");
+			driver = new InternetExplorerDriver();
+			driver.get("http://store.demoqa.com/");
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    Homeobj = new HomePageObject(driver);
 	}
 
 	
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserIsAbleToPurchaseSingleProduct(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException {
@@ -71,7 +78,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserIsAbleToPurchaseMultipleProduct(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException
@@ -91,7 +98,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Purchase completed successfully");
 	}
 
-	@Test(enabled = true, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
+	@Test(enabled = false, dataProvider = "UserAdress", dataProviderClass = DataProvider.class)
 	public void verifyUserCanRemoveProductFromCartAndPurchase(String country, String state, String email, String FN,
 			String LN, String Add, String city, String state2, String country_main, String PS, String phn)
 			throws InterruptedException {
@@ -125,7 +132,7 @@ public class DemoStoreQAFunctionalTest {
 		System.out.println("Test Passed successfully");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void verifySubTotalPriceCalcualtionForCartHavingMultipleProducts() throws InterruptedException {
 		Homeobj.hoverMenuAndClick("Accessories");
 		Homeobj.selectMenuItem("Magic Mouse");

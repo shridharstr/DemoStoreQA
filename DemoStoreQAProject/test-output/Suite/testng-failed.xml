@@ -8,8 +8,7 @@
     <classes>
       <class name="com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyUserIsAbleToPurchaseSingleProduct" invocation-numbers="0"/>
+          <include name="verifySubTotalPriceCalcualtionForCartHavingMultipleProducts"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.demostoreqa.FunctionalTests.DemoStoreQAFunctionalTest -->
