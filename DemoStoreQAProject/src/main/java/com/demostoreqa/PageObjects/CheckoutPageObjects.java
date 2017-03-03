@@ -16,7 +16,7 @@ public class CheckoutPageObjects {
 	}
 
 	public CheckoutPageObjects productQuantityUpdate(String item, String quantity) throws InterruptedException {
-		// WebElement product_name=driver.findElement(By.)
+		
 		// To Locate table
 		WebElement CheckoutTable = driver.findElement(By.xpath("//*[@id='checkout_page_container']/div[1]/table"));
 

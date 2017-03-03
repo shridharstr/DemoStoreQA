@@ -1,9 +1,13 @@
 package com.demostoreqa.PageObjects;
 
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -20,6 +24,25 @@ public abstract class DemoStoreQADefaultPageObject {
 
 		this.driver = driver;
 
+	}
+	
+	public String captureScreenshot(WebDriver driver, String screenshotName)
+	{
+		String dest = null;
+		try
+		{
+			TakesScreenshot ts=(TakesScreenshot)driver;
+			File source=ts.getScreenshotAs(OutputType.FILE);
+			dest = System.getProperty("user.dir") +"/Screenshots/"+screenshotName+".png";
+			File destination = new File(dest);
+			FileUtils.copyFile(source, destination);
+			System.out.println("Screenshot Taken");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception while taking screenshot" +e.getMessage());
+		}
+		return dest;
 	}
 
 	public DemoStoreQADefaultPageObject hoverMenuAndClick(String ProductCategory) {
@@ -113,6 +136,7 @@ public abstract class DemoStoreQADefaultPageObject {
 		GoToCheckout.click();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		return new CheckoutPageObjects(driver);
+		
 	}
 	
 	public void continueShopping()

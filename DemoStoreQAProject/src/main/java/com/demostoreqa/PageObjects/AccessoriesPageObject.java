@@ -18,7 +18,7 @@ public class AccessoriesPageObject extends DemoStoreQADefaultPageObject {
 
 	}
 
-	public void selectMenuItem(String Item) {
+/*	public void selectMenuItem(String Item) {
 
 		List<WebElement> MenuItem = driver.findElements(By.xpath("//*[@id='default_products_page_container']/div/div[2]/h2/a"));
 		System.out.println("Element Names are: " + MenuItem.size());
@@ -67,7 +67,7 @@ public class AccessoriesPageObject extends DemoStoreQADefaultPageObject {
 			}
 		}
 	}
-	
+	*/
 	public String getProductCategory(){
 		
 		
